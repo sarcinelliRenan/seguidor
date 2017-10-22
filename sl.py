@@ -20,6 +20,7 @@ rawCapture = PiYUVArray(camera, size=(640, 16))
 # allow the camera to warmup
 time.sleep(2)
 start = time.time()
+count = 0
 # capture frames from the camera
 atans = np.arange(-320.,320.,1)
 for x in xrange (atans.shape[0]):
@@ -28,8 +29,11 @@ for frame in camera.capture_continuous(rawCapture, format='yuv', use_video_port=
 #for frame in camera.capture_continuous(rawCapture, format='yuv', use_video_port=True):
 	# grab the raw NumPy array representing the image, then initialize the timestamp
 	# and occupied/unoccupied text
-	print "FPS:{0}".format(1/(time.time()-start))
-	start = time.time()	
+	if count == 100:
+		print "FPS:{0}".format(100/(time.time()-start))
+		start = time.time()
+		count = 0
+	count=count+1
 	image = frame.array[:,:,0]
 	line = image [8:15, 0:640]
 	lineb = cv2.medianBlur(line,7)
@@ -55,7 +59,7 @@ for frame in camera.capture_continuous(rawCapture, format='yuv', use_video_port=
 	results = (lineb[3,:]-255)*atans 
 	error = np.sum(results)
 		
-	print error
+#	print error
 	# show the frame
 #	cv2.imwrite("Line.jpg", line)
 
