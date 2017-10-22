@@ -52,7 +52,7 @@ int main ( int argc,char **argv ) {
     //Open camera 
 	Camera.setWidth(320);
 	Camera.setHeight(240);
-	Camera.getFrameRate();
+	Camera.setFrameRate(90);
 //	Camera.setSensorMode(7);
 	Camera.setFormat(raspicam::RASPICAM_FORMAT_GRAY);
 	
