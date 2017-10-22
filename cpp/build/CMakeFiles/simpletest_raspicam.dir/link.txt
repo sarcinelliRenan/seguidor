@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/simpletest_raspicam.dir/main.cpp.o  -o simpletest_raspicam  -L/usr/local/lib -rdynamic /opt/vc/lib/libmmal_core.so /opt/vc/lib/libmmal_util.so /opt/vc/lib/libmmal.so -lraspicam -Wl,-rpath,/usr/local/lib:/opt/vc/lib 

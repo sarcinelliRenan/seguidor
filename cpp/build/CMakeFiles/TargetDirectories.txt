@@ -1,0 +1,3 @@
+/mnt/dietpi_userdata/seguidor/cpp/build/CMakeFiles/edit_cache.dir
+/mnt/dietpi_userdata/seguidor/cpp/build/CMakeFiles/rebuild_cache.dir
+/mnt/dietpi_userdata/seguidor/cpp/build/CMakeFiles/simpletest_raspicam.dir
