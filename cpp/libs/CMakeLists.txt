@@ -1,7 +1,3 @@
-if(CMAKE_COMPILER_IS_GNUCXX)
-    set(GLOBAL_LIBS m z)
-endif(CMAKE_COMPILER_IS_GNUCXX)
-
 include_directories(raspicam)
 add_library(raspicam
 	raspicam/raspicam.cpp 
